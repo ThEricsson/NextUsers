@@ -1,13 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
-
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 
 export default function Home() {
   return (
     <>
-      <Layout title="Home">
-        <p>hola</p>
+      <Layout title="NextUsers | Home" pageTitle={"Lista de usuarios"}>
+        <></>
       </Layout>
     </>
   );

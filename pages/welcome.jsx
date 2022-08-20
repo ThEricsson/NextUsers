@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Welcome() {
   return (
     <main className="container">
@@ -9,9 +11,9 @@ export default function Welcome() {
           NextUsers! Una herramienta web enfocada en la gestión de usuarios y
           roles.
         </p>
-        <a className="btn btn-primary" href="/">
-          Vamos!
-        </a>
+        <Link href="/">
+          <a className="btn btn-primary">Vamos!</a>
+        </Link>
       </div>
     </main>
   );

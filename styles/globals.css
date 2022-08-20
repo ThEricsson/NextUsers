@@ -3,6 +3,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: Cascadia Code PL;
+  color-scheme: dark;
+  color: white;
+  background: black;
 }
 
 a {
@@ -12,14 +15,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
