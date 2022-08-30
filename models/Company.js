@@ -5,7 +5,11 @@ const CompanySchema = new mongoose.Schema({
     type: String,
     required: [true, "El nombre de empresa es obligatorio"],
   },
-  userId: {
+  description: {
+    type: String,
+    required: false,
+  },
+  users_id: {
     type: Array,
     required: false,
   },

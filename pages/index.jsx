@@ -5,7 +5,7 @@ import dbConnect from "../lib/dbConnect";
 export default function Home({ companies }) {
   return (
     <>
-      <Layout title="NextUsers | Home" pageTitle={"Lista de usuarios"}>
+      <Layout title="Home" pageTitle="Lista de empresas">
         <>
           {companies.map(({ _id, name, users_id }) => (
             <div className="card text-white bg-dark" key={_id}>
