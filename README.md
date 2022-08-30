@@ -1,4 +1,5 @@
-#About
+
+# About
 
 Proyecto de gestión de empresas y usuarios desarrollado con NextJS junto a una base de datos MongoDB.
 
