@@ -1,7 +1,16 @@
 
 # About
 
-Proyecto de gestión de empresas y usuarios desarrollado con NextJS junto a una base de datos MongoDB.
+NextUsers es un proyecto desarrollado plenamente con NextJs junto a una base de datos MongoDB, este proyecto consiste en un panel de control de empresas y sus empleados.
+
+
+## Screenshots
+
+Algunas capturas de pantalla del funcionamiento del proyecto.
+
+!! Este proyecto está aun en desarrollo y muchas de las capturas de funcionamiento pueden canviar por completo.
+
+## About NextJS
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
