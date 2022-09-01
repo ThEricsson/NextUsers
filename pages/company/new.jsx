@@ -60,7 +60,7 @@ const New = () => {
           <div className="col-6">
             <form onSubmit={handleSubmit}>
               <label className="mb-1">
-                Nombre<span className="text-danger">*</span>{" "}
+                Nombre<span className="text-danger"> *</span>{" "}
               </label>
               <input
                 type="text"
@@ -72,7 +72,7 @@ const New = () => {
                 onChange={handleChange}
               />
               <label className="mb-1">Descripción</label>
-              <input
+              <textarea
                 type="text"
                 className="form-control mb-4"
                 placeholder="Ingresar descripción"
@@ -80,14 +80,15 @@ const New = () => {
                 name="description"
                 value={form.description}
                 onChange={handleChange}
-              />
+              ></textarea>
               <input type="submit" value="Crear" className="btn btn-primary" />
             </form>
+
+            <Link href="/">
+              <a className="btn text-primary my-4 p-3">{"<- Volver"}</a>
+            </Link>
           </div>
         </div>
-        <Link href="/">
-          <a className="m-3 p-3">{"<- Volver"}</a>
-        </Link>
         {message.map(({ message }) => (
           <p className="text-danger" key={message}>
             {message}

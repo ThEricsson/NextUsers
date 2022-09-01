@@ -4,10 +4,6 @@ import dbConnect from "../../../lib/dbConnect";
 import Link from "next/dist/client/link";
 
 const CompanyPage = ({ succes, error, company }) => {
-  console.log(succes);
-  console.log(error);
-  console.log(company);
-
   if (!succes) {
     return (
       <div className="text-center text-danger my-3">
@@ -23,9 +19,33 @@ const CompanyPage = ({ succes, error, company }) => {
         title={"Detalle de " + company.name}
         pageTitle={"Detalle de " + company.name}
       >
-        <>
-          <p>{company.description}</p>
-        </>
+        <div className="row flex-d justify-content-center">
+          <div className="col-10">
+            <div className="d-flex justify-content-between align-items-center m-2">
+              <p>Trabajadores: {company.users_id.length}</p>
+
+              <div className="dropdown">
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                >
+                  Opciones
+                </button>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>{company.description}</p>
+            <Link href="/">
+              <a className="btn text-primary p-3">{"<- Volver"}</a>
+            </Link>
+          </div>
+        </div>
       </Layout>
     );
   }
