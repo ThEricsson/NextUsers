@@ -10,14 +10,20 @@ export default function Home({ companies }) {
         <>
           <div className="d-flex justify-content-md-start">
             {companies.map(({ _id, name, users_id }) => (
-              <Link href={"/company/" + _id}>
-                <div className="card text-white m-2 bg-secondary custom-company-card">
-                  <h5 className="card-header text center">{name}</h5>
-                  <div className="card-body">
-                    <p>Trabajadores: {users_id.length}</p>
-                  </div>
+              <div
+                className="card text-white m-2 bg-secondary custom-company-card"
+                key={_id}
+              >
+                <h5 className="card-header text center">{name}</h5>
+                <div className="card-body">
+                  <p>Trabajadores: {users_id.length}</p>
+                  <Link href={"/company/" + _id}>
+                    <a>
+                      <button className="btn btn-primary">See more</button>
+                    </a>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </>

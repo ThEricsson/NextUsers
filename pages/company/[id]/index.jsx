@@ -19,23 +19,28 @@ const CompanyPage = ({ succes, error, company }) => {
         title={"Detalle de " + company.name}
         pageTitle={"Detalle de " + company.name}
       >
-        <div className="row flex-d justify-content-center">
+        <div className="row d-flex justify-content-center">
           <div className="col-10">
-            <div className="d-flex justify-content-between align-items-center m-2">
+            <div className="d-flex justify-content-md-between align-items-center m-2">
               <p>Trabajadores: {company.users_id.length}</p>
 
               <div className="dropdown">
                 <button
                   className="btn btn-secondary dropdown-toggle"
                   type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   Opciones
                 </button>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
+                    <Link href={company._id + "/edit"}>
+                      <a className="dropdown-item text-warning">Editar</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <a className="dropdown-item text-danger">Eliminar</a>
                   </li>
                 </ul>
               </div>
